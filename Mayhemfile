@@ -1,0 +1,6 @@
+project: rnshah9/mayhem-bddisasm
+target: disasmtool
+
+cmds:
+  - cmd: /repo/build/disasmtool_lix/disasmtool --bits 16 --hexfile @@
+    filepath: /test.hex
