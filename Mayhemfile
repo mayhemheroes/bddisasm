@@ -2,5 +2,4 @@ project: bddisasm
 target: disasmtool
 
 cmds:
-  - cmd: /repo/build/disasmtool_lix/disasmtool --bits 16 --hexfile /test.hex
-    filepath: /test.hex
+  - cmd: /install/bin/disasmtool --bits 16 --hexfile @@
