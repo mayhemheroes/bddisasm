@@ -1,13 +1,7 @@
 FROM --platform=linux/amd64 ubuntu:20.04 as builder
 
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y make cmake clang pkgconf git
-
-RUN git clone https://github.com/Tencent/rapidjson.git
-WORKDIR /rapidjson
-RUN cmake .
-RUN make
-RUN make install
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y make cmake clang pkgconf git rapidjson-dev
 
 ADD . /repo
 WORKDIR /repo/build
